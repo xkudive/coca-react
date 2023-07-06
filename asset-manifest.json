@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/coca-react/static/css/main.bab792a6.css",
+    "main.js": "/coca-react/static/js/main.cdf3e50c.js",
+    "static/media/places.png": "/coca-react/static/media/places.38c59722e17306a03a4a.png",
+    "static/media/comfort_2.png": "/coca-react/static/media/comfort_2.0ec9082cd207883b21f3.png",
+    "static/media/comfort_1.png": "/coca-react/static/media/comfort_1.3d14ab5c97457cb4d920.png",
+    "static/media/gallery_3.png": "/coca-react/static/media/gallery_3.fb85203cdfb0273d26a2.png",
+    "static/media/gallery_1.png": "/coca-react/static/media/gallery_1.c06b012d71854c203ca2.png",
+    "static/media/hero_image_1.png": "/coca-react/static/media/hero_image_1.36fc772b358a33f84f4d.png",
+    "static/media/hero_image_2.png": "/coca-react/static/media/hero_image_2.473cca76812b8ee00f6a.png",
+    "static/media/workflow_2.png": "/coca-react/static/media/workflow_2.0e7b3dfb51a075b04f40.png",
+    "static/media/gallery_2.png": "/coca-react/static/media/gallery_2.46310d0de5384d81207a.png",
+    "static/media/mama.png": "/coca-react/static/media/mama.2a539e1fe246c6caee09.png",
+    "static/media/hero_mobile.png": "/coca-react/static/media/hero_mobile.acb5b4d3bf04c3bd5f7d.png",
+    "static/media/workflow_1.png": "/coca-react/static/media/workflow_1.e7bc829c39b134128e8a.png",
+    "index.html": "/coca-react/index.html",
+    "main.bab792a6.css.map": "/coca-react/static/css/main.bab792a6.css.map",
+    "main.cdf3e50c.js.map": "/coca-react/static/js/main.cdf3e50c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bab792a6.css",
+    "static/js/main.cdf3e50c.js"
+  ]
+}
