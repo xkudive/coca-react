@@ -2,10 +2,10 @@ import React from "react";
 
 import "../css/Footer.scss"
 
-import footerLogo from "../images/footer_logo.png"
-import facebook from "../images/facebook.png"
-import instagram from "../images/instagram.png"
-import twitter from "../images/twitter.png"
+import footerLogo from "../images/footer_logo.jpg"
+import facebook from "../images/facebook.jpg"
+import instagram from "../images/instagram.jpg"
+import twitter from "../images/twitter.jpg"
 
 export default function Footer() {
 

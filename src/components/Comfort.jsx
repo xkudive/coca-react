@@ -1,7 +1,7 @@
 import React from "react";
 
-import comfort1 from "../images/comfort_1.png";
-import comfort2 from "../images/comfort_2.png";
+import comfort1 from "../images/comfort_1.jpg";
+import comfort2 from "../images/comfort_2.jpg";
 import "../css/Comfort.scss";
 
 function Comfort() {

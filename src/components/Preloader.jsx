@@ -1,6 +1,6 @@
 import React from "react";
 
-import preloadIcon from "../images/mama.png"
+import preloadIcon from "../images/mama.jpg"
 import "../css/Preloader.css"
 
 function Preloader(){

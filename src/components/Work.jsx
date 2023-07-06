@@ -1,10 +1,10 @@
 import React from "react";
 
-import like from "../images/like.png"
-import box from "../images/box.png"
-import galley_1 from "../images/gallery_1.png"
-import galley_2 from "../images/gallery_2.png"
-import galley_3 from "../images/gallery_3.png"
+import like from "../images/like.jpg"
+import box from "../images/box.jpg"
+import galley_1 from "../images/gallery_1.jpg"
+import galley_2 from "../images/gallery_2.jpg"
+import galley_3 from "../images/gallery_3.jpg"
 import "../css/Work.css"
 
 function Work() {
