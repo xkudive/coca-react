@@ -1,0 +1,295 @@
+@keyframes fadeIn {
+	from{
+		opacity: 0;
+	} to{
+		opacity: 1;
+	}
+}
+
+.hero {
+	background: #fbfaf9;
+	overflow: hidden;
+}
+
+.hero .container {
+	padding-top: 112px;
+}
+
+.hero_text div span{
+	text-transform: uppercase;
+}
+.overhead {
+	display: inline-block;
+	border: 1px solid #1D1D21;
+	border-radius: 40px;
+	padding: 8px 12px;
+	font-family: "Inter", sans-serif;
+	font-size: 14px;
+	font-weight: 700;
+	margin-bottom: 32px;
+
+	opacity: 0;
+	animation: fadeIn 0.5s ease forwards;
+	animation-delay: 0.8s;
+}
+
+.hero_text{
+	font-size: 140px;
+	font-weight: 600;
+	color: #101010;
+	text-transform: uppercase;
+	line-height: 110%;
+}
+
+.hero_text span{
+	position: relative;
+	transform: translateY(32px);
+	opacity: 0;
+	animation-name: textAnimation;
+	animation-duration: 0.8s;
+	animation-timing-function: ease;
+	animation-fill-mode: forwards;
+	bottom: 0px;
+	transition: 0.3s ease;
+	cursor: default;
+}
+
+.hero_text_1, .hero_text_2{
+	display: flex;
+}
+
+@keyframes textAnimation{
+	from{
+		transform: translateY(32px);
+		opacity: 0;
+	} to {
+		transform: translateY(0px);
+		opacity: 1;
+	}
+}
+
+.watch_btn {
+	display: flex;
+	gap: 32px;
+	font-weight: 500;
+}
+
+.studies{
+	padding: 16px 26px;
+	background: #1D1D21;
+	border-radius: 50px;
+	color: #fff;
+
+	opacity: 0;
+	animation: fadeIn 0.5s ease forwards;
+	animation-delay: 1.6s;
+	transition: 0.3s ease;
+}
+
+.hero_content_left{
+	margin: 64px 0 160px 0;
+	z-index: 1;
+}
+
+.demo{
+	display: flex;
+	align-items: center;
+	padding: 16px 26px;
+	border: 1px solid #1D1D21;
+	border-radius: 50px;
+	color: #101010;
+
+	opacity: 0;
+	animation: fadeIn 0.5s ease forwards;
+	animation-delay: 1.8s;
+	transition: 0.3s ease;
+}
+
+.demo img {
+	margin-right: 8px;
+}
+
+.subheading{
+	max-width: 482px;
+	margin: 24px 0 48px 0;
+	color: #878787;
+	line-height: 150%;
+
+	opacity: 0;
+	animation: fadeIn 0.5s ease forwards;
+	animation-delay: 1.4s;
+}
+
+.hero_content {
+	display: flex;
+}
+
+.hero_content_right{
+	display: flex;
+	position: relative;
+	width: 100%;
+}
+
+.hero_big_image{
+	position: absolute;
+	width: 520px;
+	height: 520px;
+	bottom: 90px;
+	left: 150px;
+	opacity: 0;
+
+	animation: heroImageBigAnimation 0.8s ease forwards;
+	animation-delay: 2.4s;
+}
+
+@keyframes heroImageBigAnimation{
+	from{
+		left: 150px;
+		opacity: 0;
+	} 
+	to{
+		left: -215px;
+		opacity: 1;
+	}
+}
+
+.hero_small_image_container{
+	position: absolute;
+	display: flex;
+	clip-path: polygon(57.8% 0, 100% 0, 100% 100%, 0% 100%);
+	height: 100%;
+	aspect-ratio: 1/1;
+	background: #FBFAF9;
+	overflow: hidden;
+	
+	top: 0px;
+	left: -110px;
+	align-items: center;
+}
+
+.hero_right_image{
+	position: relative;
+	height: 100%;
+}
+
+.hero_mobile{
+	display: none;
+	opacity: 0;
+	animation: fadeIn 0.5s ease forwards;
+	animation-delay: 2s;
+}
+
+.hero_content_right_line {
+	z-index: 5;
+	position: absolute;
+	rotate: 30deg;
+	height: 105%;
+	width: 1px;
+	left: 108px;
+	transform: translateY(-48px);
+}
+
+.hero_content_right_line:before, .hero_content_right_line:after{
+	content: "";
+	position: absolute;
+	height:0%; 
+	width: 1px;
+	background: #1D1D21;
+	animation: lineReveal 1s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+	animation-delay: 1.8s;
+}
+.hero_content_right_line:before{
+	bottom: 50%;
+}
+.hero_content_right_line:after{
+	top: 50%;
+}
+
+.hero_small_image{
+	position: relative;
+	left: 165px;
+	width: 420px;
+	aspect-ratio: 1/1;
+	opacity: 0;
+	transform: translateY(-130px);
+	animation: heroImageSmallAnimation 0.8s ease forwards;
+	animation-delay: 2s;
+}
+
+@keyframes heroImageSmallAnimation{
+	from{
+		left: -200px;
+		opacity: 0;
+	} to{
+		left: 165px;
+		opacity: 1;
+	}
+}
+
+@keyframes lineReveal {
+	from{
+		height: 0px;
+	} to{
+		height: 50%;
+	}
+	
+}
+
+
+.circle	{
+	position: absolute;
+	display: flex;
+	width: 150px;
+	height: 150px;
+	bottom:	80px;
+	right: 110px;
+	border-radius: 100px;
+	align-items: center;
+	justify-content: center;
+
+	opacity: 0;
+	animation: fadeIn 0.5s ease forwards;
+	animation-delay: 2.8s;
+}
+
+.circle_text{
+	position: absolute;
+	width:100%;
+	height: 100%;
+	animation: circleRotate 10000ms linear infinite;
+}
+
+.circle_text span{
+	font-family: "Poppins";
+	position: absolute;
+	left: 50%;
+	rotate:10deg;
+	transform-origin: 0 75px;
+	font-weight: 700;
+	font-size: 16px;
+	text-transform: uppercase;
+}
+
+@keyframes circleRotate {
+	from{
+		transform: rotate(0deg);
+	} to{
+		transform: rotate(360deg);
+	}
+}
+
+
+/* Hover */
+
+.studies:hover{
+	background: #303030;
+	transform: scaleX(104%);
+}
+
+.demo:hover{
+	transform: scaleX(106%);
+}
+
+.hero_text span:hover{
+	bottom: 15px;
+}

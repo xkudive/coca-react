@@ -1,0 +1,270 @@
+.burger_btn{
+    position: relative;
+    display: none;
+	flex-direction: column;
+    min-width: 32px;
+    height: 32px;
+    justify-content: center;
+    align-items: flex-end;
+    transition: 0.4s ease;
+    cursor: pointer;
+
+    &.active{
+        span{
+            &:nth-child(2){
+                rotate: -45deg;
+            } &:nth-child(1), &:nth-child(3){
+                transform: translateY(0px);
+            } &:nth-child(1){
+                rotate: 45deg;
+                transform: translate(-13px, 5px);
+            } &:nth-child(3){
+                rotate: 45deg;
+                transform: translate(1px, 6px);
+                width: 50%;
+            }
+        }
+    }
+
+	span{
+        position: absolute;
+        border-radius: 8px;
+		width: 32px;
+        height: 3px;
+        background: #101010;
+        transition: 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+        transform-origin: center;
+
+        &:nth-child(1) {
+            transform: translateY(-8px);
+            width: 50%;
+            transform-origin: top;
+        }
+
+        &:nth-child(3) {
+            transform: translateY(8px);
+            width: 75%;
+            transform-origin: bottom;
+        }
+	}
+
+    &.non_clickable {
+        pointer-events: none;
+    }
+}
+
+.header_box.opened{
+    
+
+    &.minimize{
+        .logo_white{
+            margin-top: 16px;
+        } 
+        
+        .logo{
+            margin-top: 16px;
+        } 
+        
+        .burger_btn {
+            margin-top: 16px;
+        } 
+    }
+
+    .logo_white{
+        opacity: 1;
+        transition-delay: 1s;
+        width: 120px !important;
+    } 
+    
+    .burger_btn {
+        transition-delay: 1s;
+    } 
+
+    .logo{
+        opacity: 0;
+        transition-delay: 1s;
+        width: 120px !important;
+    } 
+    
+    .burger_btn span{
+        background: #fff;
+        transition-delay: 1s;
+    } 
+    
+    .navbar_ul a{
+        color: #E5E3E4;
+        transition-delay: 1s;
+    } 
+    
+    .navbar_ul a.active{
+        color: #ffffff;
+        transition-delay: 1s;
+    }
+
+    .register_btn{
+
+        .login{
+            opacity: 0;
+            animation: burgerFadeIn 0.4s forwards cubic-bezier(0,.35,.66,1);
+            animation-delay: 2.0s;
+        }
+
+        .register{
+            opacity: 0;
+            animation: burgerFadeIn 0.4s forwards cubic-bezier(0,.35,.66,1);
+            animation-delay: 2.1s;
+        }
+    }
+
+    .navbar_ul{
+        li{
+            padding: 24px;
+            font-size: 32px;
+            opacity: 0;
+            animation: liReveal 0.4s forwards cubic-bezier(0,.35,.66,1);
+
+        }
+
+        a:nth-child(1) li{
+            animation-delay: 1.6s;
+        }
+        a:nth-child(2) li{
+            animation-delay: 1.7s;
+        }
+        a:nth-child(3) li{
+            animation-delay: 1.8s;
+        }
+        a:nth-child(4) li{
+            animation-delay: 1.9s;
+        }
+    }
+    
+    .navbar{
+        pointer-events: all;
+        opacity: 1;
+        animation: navbarReveal 1.6s forwards cubic-bezier(0,.54,.42,1);
+    }
+}
+
+.header_box.closed{  
+    
+    .burger_btn span{
+        background: #101010;
+    } 
+
+    .register_btn{
+
+        .login{
+            animation: burgerFadeOut 0.4s forwards cubic-bezier(0,.35,.66,1);
+            animation-delay: 0.5s;
+        }
+
+        .register{
+            animation: burgerFadeOut 0.4s forwards cubic-bezier(0,.35,.66,1);
+            animation-delay: 0.6s;
+        }
+    }
+
+    .navbar_ul{
+        li{
+            padding: 24px;
+            font-size: 32px;
+            opacity: 1;
+            animation: liClose 0.4s forwards cubic-bezier(0,.35,.66,1);
+
+        }
+
+        a:nth-child(1) li{
+            animation-delay: 0s;
+        }
+        a:nth-child(2) li{
+            animation-delay: 0.1s;
+        }
+        a:nth-child(3) li{
+            animation-delay: 0.2s;
+        }
+        a:nth-child(4) li{
+            animation-delay: 0.3s;
+        }
+    }
+    .navbar{
+        pointer-events: all;
+        opacity: 1;
+        right: 0vw;
+        animation: navbarClose 1.6s forwards cubic-bezier(0,.54,.42,1);
+        animation-delay: 1s;
+    }
+}
+
+@keyframes navbarReveal {
+	0%{
+		right: -100vw;
+		height: 48px;
+	}
+
+	50%{
+		height: 48px;
+		right: -0vw;
+	}
+
+	100%{
+		height: 100%;
+		right: -0vw;
+	}
+}
+
+@keyframes navbarClose {
+	0%{
+		height: 100%;
+		right: 0vw;
+	}
+
+	50%{
+		height: 48px;
+		right: 0vw;
+	}
+
+	100%{
+		right: -100vw;
+		height: 48px;
+	}
+}
+
+@keyframes liReveal {
+	from {
+		transform: translateY(40px);
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+
+@keyframes liClose {
+	from {
+		transform: translateY(0px);
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+		transform: translateY(-40px);
+	}
+}
+
+@keyframes burgerFadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+@keyframes burgerFadeOut {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}

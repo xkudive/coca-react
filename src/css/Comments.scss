@@ -1,0 +1,128 @@
+@import url('//db.onlinewebfonts.com/c/768446cc3d04d6dd3289ae1715bdb682?family=GT+Walsheim+Regular');
+
+.comments{
+    background: #F9F9FB;
+    position: relative;
+    
+    &:before{
+        content: "";
+        position: absolute;
+        width: 100%;
+        z-index: 1;
+        height: 100%;
+        pointer-events: none;
+        background: radial-gradient(100% 60% at 50% 100%, rgba(0, 102, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+    }
+
+    .container{
+        font-family: "GT Walsheim Regular", sans-serif;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        width: 100%;
+        margin: 0px;
+        margin-top: 40px;
+        height: 768px;
+        padding: 0px 0px;
+        overflow: hidden;
+
+        .comments_container{
+            position: absolute;
+            top: 0px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            gap: 30px;
+            justify-content: center;
+            width: 100%;
+
+            .marquee_wrap{
+                position: relative;
+                top: 0px;
+                display: flex;
+                flex-direction: row;
+                gap: 30px;
+                width: auto;
+                justify-content: center;
+                width: auto;
+
+                &:last-child{
+                    display: none;
+                }
+
+                .column{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+        
+                    .comments_box{
+                        display: flex;
+                        flex-direction: column;
+                        border: 1px solid rgba(0, 0, 0, 0.05);
+                        background: #fff;
+                        border-radius: 15px;
+                        padding: 30px;
+                        gap: 25px;
+                        width: 328px;
+                        transition: background 0.4s ease;
+                        cursor: default;
+                        box-shadow: rgba(0, 0, 0, 0.18) 0px 0.602187px 0.602187px -1.25px,
+                                    rgba(0, 0, 0, 0.16) 0px 2.28853px 2.28853px -2.5px,
+                                    rgba(0, 0, 0, 0.063) 0px 10px 10px -3.75px;
+            
+                        &:hover{
+                            background: rgb(245, 245, 245);
+                        }
+            
+                        .label{
+                            display: flex;
+                            gap: 16px;
+                            align-items: center;
+            
+                            .avatar_box{
+                                height: 50px;
+                                width: 50px;
+                                background: #202020;
+                                border-radius: 50px;
+                                overflow: hidden;
+            
+                                img{
+                                    width: 100%;
+                                }
+                            }
+            
+                            .name_box{
+                                .nickname{
+                                    font-size: 18px;
+                                    font-weight: 700;
+                                    line-height: 120%;                       
+                                }.username{
+                                    font-size: 18px;
+                                    color: #858585;
+                                    line-height: 120%;                  
+                                }
+                            }
+                        }
+            
+                        .comment{
+                            font-size: 22px;
+                            color: rgb(34, 34, 34);
+                            text-wrap: balance;
+                            line-height: 150%;
+                            letter-spacing: 0px;
+                            .comment_link{
+                                cursor: pointer;
+                                color: rgb(0, 153, 255);
+                                text-decoration: underline;
+                                word-break: keep-all;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}

@@ -1,0 +1,152 @@
+.work {
+    background: #28292D;
+    overflow: clip; 
+}
+
+.work .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 96px;
+}
+
+.work_left_section{
+    margin: 160px 0;
+}
+
+.work_title{
+    display: flex;
+    flex-direction: column;
+    font-size: 72px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 600;
+    line-height: 115%;
+}
+
+.work_title span{
+    opacity: 0;
+}
+
+.work_title.active span{
+    animation: textAnimation 0.8s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+	animation-delay: 0.5s;
+}
+
+.work_title.active span:nth-child(2){
+	animation-delay: 0.6s;
+}
+
+.work_subhead{
+    max-width: 512px;
+    line-height: 150%;
+    color: #fff;
+    margin: 24px 0 60px 0;
+    opacity: 0;
+}
+
+.work_subhead.active{
+    animation: fadeIn 0.6s ease forwards;
+	animation-delay: 0.6s;
+}
+
+.work_achievements{
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+
+.work_achievements.active .achievement_box{
+    animation: fadeIn 0.6s ease forwards;
+	animation-delay: 0.7s;
+}
+
+.work_achievements.active .achievement_box:nth-child(2){
+	animation-delay: 0.8s;
+}
+
+.achievement_box{
+    display: flex;
+    align-items: center;
+    gap: 36px;
+    opacity: 0;
+}
+.achievement_box_container{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.counter{
+    letter-spacing: -3px;
+    line-height: 115%;
+    font-weight: 600;
+    font-size: 64px;
+    color: #fff;
+}
+
+.counter_text{
+    font-size: 18px;
+    color: #ABB2C3;
+    line-height: 160%;
+}
+
+.work_right_section {
+    position: relative;
+    display: flex;
+    height: 100%;
+    width: 0px;
+    align-items: center;
+}
+
+.gallery_container {
+    position: relative;
+    display: flex;
+    gap: 30px;
+}
+
+.gallery_container img{
+    position: relative;
+    opacity: 0;
+    transition: 0.4s ease;
+    bottom: 0;
+}
+
+.gallery_container.active img{
+    animation: textAnimation 0.8s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+}
+
+.gallery_container.active img[data-image="gallery_image_2"]{
+    animation-delay: 1s;
+}
+.gallery_container.active img[data-image="gallery_image_1"]{
+    animation-delay: 1.1s;
+}
+.gallery_container.active img[data-image="gallery_image_3"]{
+    animation-delay: 1.2s;
+}
+
+.gallery_box_1{
+    position: relative;
+    display: flex;
+    align-items: end;
+}
+
+.gallery_box_2{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 30px;
+}
+
+.work_right_section img{
+    border-radius: 12px;
+}
+
+/* Hover */
+
+.gallery_container img:hover{
+    scale: 1.02;
+    bottom: 5px;
+}

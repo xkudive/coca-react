@@ -1,0 +1,192 @@
+.workflow{
+    background: #F9F9FB;
+    overflow: clip;
+
+    .container{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center ;
+        max-width: 1440px;
+        width: 100%;
+        margin: 80px 0;
+
+        .workflow_image_1{
+            top: 120px;
+            position: absolute;
+            width: 160px;
+            border-radius: 12px;
+            overflow: hidden;
+            left: 120px;
+
+            img{
+                object-fit: cover;
+                width: 100%;
+                opacity: 0;
+            }
+        }.workflow_image_2{
+            position: absolute;
+            width: 48px;
+            left: 60%;
+            top: 280px;
+
+            img{
+                object-fit: cover;
+                width: 100%;
+                opacity: 0;
+            }
+        }.workflow_image_3{
+            position: absolute;
+            height: 220px;
+            top: 20px;
+            border-radius: 12px;
+            overflow: hidden;
+            right: 80px;
+
+            img{
+                object-fit: cover;
+                width: 100%;
+                opacity: 0;
+            }
+        }
+
+        .workflow_title{
+            z-index: 1;
+            display: flex;
+            font-size: 64px;
+            text-transform: uppercase;
+            color: #101010;
+            font-weight: 600;
+            line-height: 115%;
+            max-width: 678px;
+            margin-bottom: 96px;
+            
+            p{
+                text-align: center;
+
+                span{
+                    display: inline-block;
+                    position: relative;
+                    opacity: 0;
+                    margin-right: 16px;
+                }
+            }
+
+            &.active{
+                span{
+                    animation: textAnimation 0.8s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+                }
+            }
+        }
+
+        .slider{
+            z-index: 1;
+            position: relative;
+            display: flex;
+            align-self: center;
+            max-width: 100%;
+            cursor: grab;
+            padding-top: 120px;
+
+
+            .inner_slider{
+                min-width: 100%;
+                display: flex;
+
+                .slider_item{
+                    display: flex;
+                    position: relative;
+                    flex-direction: column;
+                    min-width: 560px;
+                    opacity: 0;
+                    padding-right: 120px;
+
+                    &:last-child{
+                        min-width: 440px;
+                        padding-right: 0;
+                    }
+
+                    h1{
+                        color: #E9ECF2;
+                        font-weight: 600;
+                        font-size: 80px;
+                        margin-bottom: 20px;
+                    }
+
+                    .slider_title{
+                        letter-spacing: -1px;
+                        font-size: 40px;
+                        text-transform: uppercase;
+                        color: #101010;
+                        font-weight: 600;
+                        line-height: 120%;
+                        margin-bottom: 16px;
+                    }
+
+                    .slider_subhead{
+                        max-width: 440px;
+                        line-height: 150%;
+                        color: #757B8A;
+                    }
+                }
+            }
+
+
+            &.active {
+                .inner_slider .slider_item{
+                    animation: textAnimation 0.8s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+                }
+
+                @for $count from 1 to 6{
+                    .slider_item:nth-child(#{$count}){
+                        animation-delay: 0.1s *$count + 0.9s;
+                    }
+                }
+            }
+
+            &.animationsDisabled{
+
+                .inner_slider .slider_item{
+                    animation: none;
+                    opacity: 1;
+                }
+
+                @for $count from 1 to 6{
+                    .slider_item:nth-child(#{$count}){
+                        animation-delay: 0s;
+                    }
+                }
+            }
+        }
+
+        .slider_scrollbar{
+            margin-top: 96px;
+            position: relative;
+            width: 520px;
+            height: 6px;
+            border-radius: 6px;
+            background: #d8dde9;
+            opacity: 0;
+
+            .slider_scrollbar_tracker{
+                height: 100%;
+                border-radius: 6px;
+                background: #101010;
+            }
+        }
+    }
+
+    &.active{
+        .workflow_image_1 img, .workflow_image_2 img, .workflow_image_3 img{
+            animation: textAnimation 0.8s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+            animation-delay: 0.7s;
+        }
+        .workflow_image_2 img{animation-delay: 0.8s;}
+        .workflow_image_3 img{animation-delay: 0.9s;}
+
+        .slider_scrollbar{
+            animation: fadeIn 0.6s 1.2s ease forwards;
+        }
+    }
+}
