@@ -13,8 +13,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "predeploy" : "npm run build",
-    "deploy" : "gh-pages -d build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -38,5 +38,8 @@
     ]
   },
   "start": "FAST_REFRESH=false react-scripts start",
-  "homepage" : "http://xkudive.github.io/coca-react"
+  "homepage": "http://xkudive.github.io/coca-react",
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
+  }
 }
