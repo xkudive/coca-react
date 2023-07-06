@@ -58,6 +58,7 @@
                     gap: 20px;
         
                     .comments_box{
+                        will-change: transform;
                         display: flex;
                         flex-direction: column;
                         border: 1px solid rgba(0, 0, 0, 0.05);

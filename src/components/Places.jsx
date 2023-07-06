@@ -1,6 +1,6 @@
 import React from "react";
 
-import placesImg from "../images/places.jpg"
+import placesImg from "../images/places.png"
 import "../css/Places.scss"
 
 export default function Places() {

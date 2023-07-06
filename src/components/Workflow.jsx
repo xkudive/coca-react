@@ -2,9 +2,9 @@ import React from "react";
 
 import { motion, useMotionValue, useTransform, useSpring } from "framer-motion";
 
-import star from "../images/star.jpg"
-import workflowImage1 from "../images/workflow_1.jpg"
-import workflowImage2 from "../images/workflow_2.jpg"
+import star from "../images/star.png"
+import workflowImage1 from "../images/workflow_1.png"
+import workflowImage2 from "../images/workflow_2.png"
 import "../css/Workflow.scss";
 
 

@@ -1,7 +1,7 @@
 import React from "react";
 
-import logo from "../images/logo.jpg";
-import logoWhite from "../images/logo_white.jpg";
+import logo from "../images/logo.png";
+import logoWhite from "../images/logo_white.png";
 import "../css/Header/Header.css"
 import "../css/Header/burgerBtn.scss"
 

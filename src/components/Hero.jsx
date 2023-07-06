@@ -1,10 +1,10 @@
 import React from "react";
 
-import play from "../images/play.jpg";
-import star from "../images/star.jpg";
-import heroImageBig from "../images/hero_image_1.jpg";
-import heroImageSmall from "../images/hero_image_2.jpg";
-import heroMobile from "../images/hero_mobile.jpg";
+import play from "../images/play.png";
+import star from "../images/star.png";
+import heroImageBig from "../images/hero_image_1.png";
+import heroImageSmall from "../images/hero_image_2.png";
+import heroMobile from "../images/hero_mobile.png";
 import "../css/Hero.css";
 
 
