@@ -13,6 +13,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy" : "npm run build",
+    "deploy" : "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -35,5 +37,6 @@
       "last 1 safari version"
     ]
   },
-  "start": "FAST_REFRESH=false react-scripts start"
+  "start": "FAST_REFRESH=false react-scripts start",
+  "homepage" : "http://xkudive.github.io/coca-react"
 }
