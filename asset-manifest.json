@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/coca-react/static/css/main.bab792a6.css",
+    "main.css": "/coca-react/static/css/main.e1a8f19f.css",
     "main.js": "/coca-react/static/js/main.cdf3e50c.js",
     "static/media/places.png": "/coca-react/static/media/places.38c59722e17306a03a4a.png",
     "static/media/comfort_2.png": "/coca-react/static/media/comfort_2.0ec9082cd207883b21f3.png",
@@ -15,11 +15,11 @@
     "static/media/hero_mobile.png": "/coca-react/static/media/hero_mobile.acb5b4d3bf04c3bd5f7d.png",
     "static/media/workflow_1.png": "/coca-react/static/media/workflow_1.e7bc829c39b134128e8a.png",
     "index.html": "/coca-react/index.html",
-    "main.bab792a6.css.map": "/coca-react/static/css/main.bab792a6.css.map",
+    "main.e1a8f19f.css.map": "/coca-react/static/css/main.e1a8f19f.css.map",
     "main.cdf3e50c.js.map": "/coca-react/static/js/main.cdf3e50c.js.map"
   },
   "entrypoints": [
-    "static/css/main.bab792a6.css",
+    "static/css/main.e1a8f19f.css",
     "static/js/main.cdf3e50c.js"
   ]
 }
