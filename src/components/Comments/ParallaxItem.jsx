@@ -18,8 +18,8 @@ export default function ParallaxItem({ children }){
             const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
             const offsetTop = rect.top + scrollTop;
         
-            setStart((offsetTop - 100) / document.body.clientHeight);
-            setEnd((offsetTop + rect.height - 100) / document.body.clientHeight);
+            setStart((offsetTop-200) / document.body.clientHeight);
+            setEnd((offsetTop + rect.height-200) / document.body.clientHeight);
             }
             getScrollProps()
 
@@ -40,7 +40,7 @@ export default function ParallaxItem({ children }){
     let transform = useSpring(useTransform(scrollYProgress, [element.start, element.end], [100, 0]), config)
 
     return (
-        <motion.div className="comments_box" ref={ref} initial={{ translateY: 100 }} style={{ translateY: transform }}>
+        <motion.div className="comments_box" ref={ref} style={{ translateY: transform }}>
             {children}
         </motion.div>
     );
